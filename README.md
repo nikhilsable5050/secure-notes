@@ -46,10 +46,4 @@ A secure full-stack notes application built with Spring Boot, React, JWT, OAuth2
 
 ---
 
-## ⚙️ Installation
 
-### Clone Repository
-
-```bash
-git clone https://github.com/your-username/secure-notes.git
-cd secure-notes
