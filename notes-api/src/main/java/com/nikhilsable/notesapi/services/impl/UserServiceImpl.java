@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    //@PreAuthorize("hasRole('ROLE_ADMIN')")
     @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
