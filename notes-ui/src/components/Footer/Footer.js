@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
+  FaGithub,
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
@@ -39,32 +39,35 @@ const Footer = () => {
           <span>&copy;{currentYear} SecureNote | All rights reserved.</span>
         </p>
 
-        <div className="flex-1  flex flex-row gap-6 lg:justify-end justify-start items-center">
-          <Link
-            className="text-white border h-10 w-10 flex justify-center items-center border-white rounded-full p-2 hover:bg-blue-600 transition-colors duration-300"
-            to="https://facebook.com"
-          >
-            <FaFacebookF width={20} height={20} />
-          </Link>{" "}
-          <Link
-            className="text-white border h-10 w-10 flex justify-center items-center border-white rounded-full p-2 hover:bg-blue-600 transition-colors duration-300"
-            to="https://facebook.com"
-          >
-            <FaLinkedinIn width={20} height={20} />
-          </Link>{" "}
-          <Link
-            className="text-white border h-10 w-10 flex justify-center items-center border-white rounded-full p-2 hover:bg-blue-600 transition-colors duration-300"
-            to="https://facebook.com"
-          >
-            <FaTwitter width={20} height={20} />
-          </Link>{" "}
-          <Link
-            className="text-white border h-10 w-10 flex justify-center items-center border-white rounded-full p-2 hover:bg-blue-600 transition-colors duration-300"
-            to="https://facebook.com"
-          >
-            <FaInstagram width={20} height={20} />
-          </Link>
-        </div>
+       <div className="flex-1 flex flex-row gap-6 lg:justify-end justify-start items-center">
+  <Link
+    className="text-white border h-10 w-10 flex justify-center items-center border-white rounded-full p-2 hover:bg-blue-600 transition-colors duration-300"
+    to="https://github.com/nikhilsable5050"
+  >
+    <FaGithub width={20} height={20} />
+  </Link>{" "}
+
+  <Link
+    className="text-white border h-10 w-10 flex justify-center items-center border-white rounded-full p-2 hover:bg-blue-600 transition-colors duration-300"
+    to="https://www.linkedin.com/in/nikhil-sable-51b781283/"
+  >
+    <FaLinkedinIn width={20} height={20} />
+  </Link>{" "}
+
+  <Link
+    className="text-white border h-10 w-10 flex justify-center items-center border-white rounded-full p-2 hover:bg-blue-600 transition-colors duration-300"
+    to="https://x.com/nikhilsable5050"
+  >
+    <FaTwitter width={20} height={20} />
+  </Link>{" "}
+
+  <Link
+    className="text-white border h-10 w-10 flex justify-center items-center border-white rounded-full p-2 hover:bg-blue-600 transition-colors duration-300"
+    to="https://www.instagram.com/nikhilsable5050/"
+  >
+    <FaInstagram width={20} height={20} />
+  </Link>
+</div>
       </div>
     </footer>
   );
