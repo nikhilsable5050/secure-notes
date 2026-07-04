@@ -9,6 +9,7 @@ import com.nikhilsable.notesapi.repositories.PasswordResetTokenRepository;
 import com.nikhilsable.notesapi.repositories.RoleRepository;
 import com.nikhilsable.notesapi.repositories.UserRepository;
 import com.nikhilsable.notesapi.services.UserService;
+import com.nikhilsable.notesapi.util.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -37,6 +38,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     PasswordResetTokenRepository passwordResetTokenRepository;
+
+    @Autowired
+    EmailService emailService;
 
     @Override
     public void updateUserRole(Long userId, String roleName) {
@@ -152,5 +156,6 @@ public class UserServiceImpl implements UserService {
 
         String resetUrl = frontendUrl + "/reset-password?token=" + token;
         // Send email to user
+        emailService.sendPasswordResetEmail(user.getEmail(), resetUrl);
     }
 }
