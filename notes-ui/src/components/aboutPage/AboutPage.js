@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
+  FaGithub,
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
@@ -39,19 +39,34 @@ const AboutPage = () => {
           </li>
         </ul>
         <div className="flex space-x-4 mt-10">
-          <Link className="text-white rounded-full p-2 bg-customRed  " to="/">
-            <FaFacebookF size={24} />
-          </Link>
-          <Link className="text-white rounded-full p-2 bg-customRed  " to="/">
-            <FaTwitter size={24} />
-          </Link>
-          <Link className="text-white rounded-full p-2 bg-customRed  " to="/">
-            <FaLinkedinIn size={24} />
-          </Link>
-          <Link className="text-white rounded-full p-2 bg-customRed  " to="/">
-            <FaInstagram size={24} />
-          </Link>
-        </div>
+  <Link
+    className="text-white rounded-full p-2 bg-customRed"
+    to="https://github.com/nikhilsable5050"
+  >
+    <FaGithub size={24} />
+  </Link>
+
+  <Link
+    className="text-white rounded-full p-2 bg-customRed"
+    to="https://x.com/nikhilsable5050"
+  >
+    <FaTwitter size={24} />
+  </Link>
+
+  <Link
+    className="text-white rounded-full p-2 bg-customRed"
+    to="https://www.linkedin.com/in/nikhil-sable-51b781283/"
+  >
+    <FaLinkedinIn size={24} />
+  </Link>
+
+  <Link
+    className="text-white rounded-full p-2 bg-customRed"
+    to="https://www.instagram.com/nikhilsable5050/"
+  >
+    <FaInstagram size={24} />
+  </Link>
+</div>
       </div>
     </div>
   );
