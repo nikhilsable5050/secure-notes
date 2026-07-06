@@ -11,6 +11,7 @@ import com.nikhilsable.notesapi.security.request.SignupRequest;
 import com.nikhilsable.notesapi.security.response.LoginResponse;
 import com.nikhilsable.notesapi.security.response.MessageResponse;
 import com.nikhilsable.notesapi.security.response.UserInfoResponse;
+import com.nikhilsable.notesapi.security.services.UserDetailsImpl;
 import com.nikhilsable.notesapi.services.TotpService;
 import com.nikhilsable.notesapi.services.UserService;
 import com.nikhilsable.notesapi.util.AuthUtil;
@@ -80,7 +81,7 @@ public class AuthController {
 //      Set the authentication
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
 
         String jwtToken = jwtUtils.generateTokenFromUsername(userDetails);
 
@@ -233,7 +234,7 @@ public class AuthController {
     }
 
 
-    @PostMapping("/user/2fa-status")
+    @GetMapping("/user/2fa-status")
     public ResponseEntity<?> get2FAStatus() {
         User user = authUtil.loggedInUser();
         if (user != null){
